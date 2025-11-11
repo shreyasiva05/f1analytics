@@ -1,104 +1,119 @@
-F1 Analytics Project
-Overview
+F1 Analytics
 
-This project provides tools to analyze Formula 1 racing data, including drivers, teams, cars, race results, performance trends, and mobility metrics such as lap times, speed profiles, and pit strategies. The goal is to give users an easy way to explore how different factors affect race outcomes and driver performance.
+Analyze Formula 1 racing like a pro. This project offers tools to explore driver performance, team comparisons, car behavior, pit strategy, and overall race trends using real F1 datasets.
 
-The project is organized so that both beginners and experienced developers can run analyses, visualize data, and extend the code with new metrics.
+Whether you're just starting with data analysis or you're scaling up for deep competitive insights, this package helps you load data, run custom analytics, and create clean visualizations.
 
-Features
+🚗 Features
 
-Driver performance tracking (lap times, positions, consistency)
+Driver performance tracking
+Lap times, position changes, session consistency.
 
 Team and car comparisons
+Pace, reliability, sector strengths, and seasonal trends.
 
-Race trend analysis (pit windows, tire choices, pace evolution)
+Race trend analysis
+Pit windows, tire strategies, stint pace evolution.
 
-Visualization tools for speed, position, and strategy
+Visualization tools
+Speed charts, pit stop overlays, lap-time deltas.
 
-Data loading from CSV or online datasets (depending on your configuration)
+Flexible data loading
+Works with CSV files or online datasets depending on configuration.
 
-Installation
-1. Clone the Repository
+📦 Installation
+1. Clone the repository
 git clone https://github.com/your-username/f1-analytics.git
 cd f1-analytics
 
-2. Install Dependencies
+2. Install dependencies
 
 Make sure you have Python 3.9+ installed.
 
 pip install -r requirements.txt
 
-
-If you are using a virtual environment:
-
+3. (Optional) Create a virtual environment
 python -m venv venv
-source venv/bin/activate   # macOS/Linux
-venv\Scripts\activate      # Windows
 
-How to Run the Project
-1. Prepare Data
 
-Place any dataset (e.g., race results, lap times) in the data/ folder.
-Common data formats:
+Activate it:
+
+macOS/Linux
+
+source venv/bin/activate
+
+
+Windows
+
+venv\Scripts\activate
+
+🏁 How to Run the Project
+1. Prepare Your Data
+
+Place your datasets inside the data/ folder.
+
+Common files include:
 
 race_results.csv
-
 lap_times.csv
-
 drivers.csv
-
 constructors.csv
 
-2. Run Basic Analysis
+2. Run Basic Analyses
+Analyze driver performance
+python analyses/analyze_driver.py --driver "Lewis Hamilton"
 
-For example, to analyze driver performance:
-
-python analyze_driver.py --driver "Lewis Hamilton"
-
-
-To compare teams:
-
-python compare_teams.py --team1 Mercedes --team2 Ferrari
+Compare two teams
+python analyses/compare_teams.py --team1 Mercedes --team2 Ferrari
 
 3. Run Visualizations
-python visualize_lap_times.py --race "Italian GP"
+python visualizations/visualize_lap_times.py --race "Italian GP"
 
 
-Plots will be saved in the outputs/ folder.
+Plots are saved automatically in the outputs/ folder.
 
-Project Structure
+📂 Project Structure
 f1-analytics/
 │
-├── data/                # Raw and cleaned datasets
-├── scripts/             # Utility scripts for parsing and cleaning data
-├── analyses/            # Core analytics modules
-├── visualizations/      # Plotting tools
-├── outputs/             # Generated plots and reports
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
+├── data/                 # Raw & cleaned datasets
+├── scripts/              # Data parsers & utilities
+├── analyses/             # Core analysis modules
+│   ├── analyze_driver.py
+│   └── compare_teams.py
+│
+├── visualizations/       # Plotting utilities
+│   └── visualize_lap_times.py
+│
+├── outputs/              # Auto-generated plots/reports
+├── requirements.txt      # Dependencies
+└── README.md             # Documentation
 
-Example Analyses
+🧪 Example Analyses You Can Run
 
 Find the fastest driver in a race
 
-Compare qualifying vs race pace
+Compare qualifying pace vs race pace
 
-Study overtake patterns and pit timing
+Analyze overtake patterns and pit timing
 
 Evaluate car consistency over a season
 
-Contributing
+Study sector-level performance
 
-Pull requests are welcome. If you want to add:
+🧩 Contributing
 
-new metrics,
+Pull requests are welcome!
 
-new visualization types,
+If you'd like to add:
 
-or support for another dataset,
+new metrics
 
-please open an issue first to discuss ideas.
+new visualization types
 
-License
+support for new datasets
+
+please open an issue first so we can discuss the idea.
+
+📜 License
 
 This project is released under the MIT License.
